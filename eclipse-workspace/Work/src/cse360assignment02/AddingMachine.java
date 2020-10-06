@@ -12,13 +12,14 @@ public class AddingMachine {
   */
   public AddingMachine () { // Initializes the adding machine
     total = 0;  // not needed - included for clarity
+    toString = "0";
   }
 
   /*
     This method returns the total when called
   */
   public int getTotal () { // Retrieves the total
-    return 0;
+    return total;
   }
 
   /*
@@ -26,6 +27,8 @@ public class AddingMachine {
     toString a plus sign and a value
   */
   public void add (int value) { // Adds value to the total
+    toString = toString + " + " + value;
+    total += value;
   }
 
   /*
@@ -33,18 +36,22 @@ public class AddingMachine {
     the toString a minus sign and the value
   */
   public void subtract (int value) { // Subtracts value from total
+    toString = toString + " - " + value;
+    total -= value;
   }
 
   /*
     This method prints out the toString which has been compiling all of the operations performed
   */
   public String toString () { // Prints the total
-	  return "";
+    return toString;
   }
 
   /*
       This method clears the total and the toString returning them both to 0
   */
   public void clear() { // Clears total
+    total = 0;
+    toString = "0";
   }
 }
